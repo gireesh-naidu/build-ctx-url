@@ -13,7 +13,7 @@ WORKDIR /go/src/github.com/ghgsnaidu/go-db-demo
 #RUN echo $GOPATH
 #RUN go mod tidy
 
-COPY go-db-demo .
+COPY . .
 RUN go mod tidy
 WORKDIR /go/src/github.com/ghgsnaidu/go-db-demo/cmd/main
 ENV DBURL="root:root@tcp(172.17.0.2:3306)/mydb"
