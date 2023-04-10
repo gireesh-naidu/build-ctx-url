@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ghgsnaidu/go-db-demo/pkg/dbconfig"
-	"github.com/ghgsnaidu/go-db-demo/pkg/routers"
-	"github.com/ghgsnaidu/go-db-demo/pkg/services"
 	"github.com/gorilla/mux"
 )
 
@@ -19,17 +16,17 @@ func main() {
 
 	fmt.Println("........router created")
 	fmt.Println("added test log message")
-	config := dbconfig.NewConfig()
+	//config := dbconfig.NewConfig()
 
 	//opening db connc by injecting config and getting db instance
-	fmt.Println("connecting to db in service B")
-	db := dbconfig.InitDB(config)
+	fmt.Println("connecting to service B")
+	//db := dbconfig.InitDB(config)
 
 	//injecting db into services layer
-	services.InitServices(db)
-
-	routers.RegisterRoutes(router)
-	http.Handle("/", router)
+	//services.InitServices(db)
+	//
+	//routers.RegisterRoutes(router)
+	//http.Handle("/", router)
 
 	fmt.Println("server starting...... ")
 	err := http.ListenAndServe(":3000", router)
