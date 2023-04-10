@@ -22,7 +22,7 @@ func main() {
 	config := dbconfig.NewConfig()
 
 	//opening db connc by injecting config and getting db instance
-	fmt.Println("connecting to db in SERVICE B")
+	fmt.Println("connecting to db in service B")
 	db := dbconfig.InitDB(config)
 
 	//injecting db into services layer
