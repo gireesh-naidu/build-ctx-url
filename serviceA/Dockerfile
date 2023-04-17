@@ -10,7 +10,7 @@ WORKDIR /go/src/github.com/ghgsnaidu/go-db-demo
 #COPY go.mod .
 #COPY go.sum .
 #
-#RUN echo $GOPATH
+CMD ["ls"]
 #RUN go mod tidy
 
 COPY . .
