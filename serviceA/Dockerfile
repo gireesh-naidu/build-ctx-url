@@ -14,7 +14,7 @@ CMD ["ls"]
 #RUN go mod tidy
 
 COPY . .
-RUN go mod tidy
+#RUN #go mod tidy
 WORKDIR /go/src/github.com/ghgsnaidu/go-db-demo/cmd/main
 ENV DBURL="root:root@tcp(172.17.0.2:3306)/mydb"
 # Build the Go app
