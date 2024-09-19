@@ -27,3 +27,4 @@ RUN go build   -o app
 EXPOSE 3000
 # Run the binary program produced by `go install`
 CMD ["./app"]
+# test test test
