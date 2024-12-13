@@ -20,7 +20,7 @@ RUN go build   -o app
 
 
 # This container exposes port 3000 to the outside world
-
+# euyfberl rverhf4r errb vruv4 v vuriv rv rvr
 EXPOSE 3000
 # Run the binary program produced by `go install`
 CMD ["./app"]
